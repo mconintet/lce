@@ -1,0 +1,9 @@
+.idea
+cordova.js
+*-dis
+__PRE_LOAD_CLASSES__.php
+__ORGANIZED__.php
+log
+log.txt
+log.db
+var/

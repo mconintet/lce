@@ -1,0 +1,16 @@
+#generate by Lce CLI tool at <?php echo date('Y-m-d H:i:s'); ?>
+
+<IfModule mod_rewrite.c>
+
+    Options +FollowSymLinks
+    IndexIgnore */*
+    RewriteEngine on
+
+    # no rewriting for exist files
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+
+    # otherwise forward it to index.php
+    RewriteRule . index.php
+</IfModule>

@@ -1,0 +1,8 @@
+/**
+* comment below when in production mode
+*/
+error_reporting(E_ALL);
+
+include('<?php echo $this->_lceWebDir; ?>');
+
+\Lce\web\Application::run();

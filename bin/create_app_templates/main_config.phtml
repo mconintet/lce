@@ -1,0 +1,26 @@
+return array(
+    'application' => array(
+        'directory' => '<?php echo $this->_applicationDirParent; ?>',
+        'namespace' => '<?php echo $this->_applicationNamespaceRoot; ?>',
+        'timezone' => 'Asia/Shanghai',
+        'errorTemplate' => '<?php echo $this->_applicationDir; ?>/code/data/error.html'
+    ),
+    'logger' => array(
+        'enable' => false,
+        'adapter' => '\Lce\web\log\adapter\FileAdapter',
+        'logFileLocation' => '<?php echo $this->_applicationDir; ?>/log',
+        'dbFileLocation' => '<?php echo $this->_applicationDir;?>/log.db'
+    ),
+    'router' => array(
+        'rewrite' => true,
+        'ignoreCase' => true,
+        'notFoundTemplate' => '<?php echo $this->_applicationDir; ?>/code/data/notFound.html',
+        'regexpRouters' => array(
+            array(
+                'from' => array('user', '(\d+)'),
+                'paramMap' => array('id'),
+                'to' => 'index/index'
+            )
+        )
+    )
+);

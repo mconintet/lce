@@ -1,0 +1,20 @@
+namespace <?php echo $this->_applicationNamespaceRoot; ?>\code\controllers;
+
+use Lce\web\mvc\Controller;
+
+class Index extends Controller
+{
+    public function indexAction()
+    {
+        echo 'Hello Lce';
+        return;
+    }
+
+    /**
+     * @return boolean return false to skip running real action
+     */
+    protected function _beforeDoActionMethod()
+    {
+        // TODO: Implement preAction() method.
+    }
+}
